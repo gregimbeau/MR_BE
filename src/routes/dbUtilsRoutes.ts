@@ -12,16 +12,17 @@ router.post("/seed-database", async (_req, res) => {
 
     // Seeding vendors
     const vendors = [
-      { name: "Vendor Prime" },
-      { name: "Vendor Next" },
-      { name: "Vendor Elite" },
-      { name: "Vendor Pro" },
-      { name: "Vendor Ultra" },
+      { name: "John Doe" },
+      { name: "Lisa Prat" },
+      { name: "Rob Bird" },
+      { name: "Alice Cooper" },
+      { name: "Lisa Prat" },
     ];
     for (const vendor of vendors) {
-      await client.query("INSERT INTO vendors (name) VALUES ($1)", [
-        vendor.name,
-      ]);
+      await client.query(
+        "INSERT INTO vendors (name) VALUES ($1)",
+        [vendor.name]
+      );
     }
 
     // Seeding buyers

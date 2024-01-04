@@ -6,7 +6,9 @@ const router = express.Router();
 // Get all vendors
 router.get("/vendors", async (req, res) => {
   try {
-    const allVendors = await pool.query("SELECT * FROM vendors");
+    const allVendors = await pool.query(
+      "SELECT id, name FROM vendors"
+    );
     res.json(allVendors.rows);
   } catch (err) {
     const error = err as Error;
@@ -55,7 +57,7 @@ router.put("/vendors/:id", async (req, res) => {
   const { name } = req.body;
   try {
     const updateVendor = await pool.query(
-      "UPDATE vendors SET name = $1 WHERE id = $2 RETURNING *",
+      "UPDATE vendors SET name = $1, WHERE id = $2 RETURNING *",
       [name, id]
     );
     if (updateVendor.rows.length === 0) {
