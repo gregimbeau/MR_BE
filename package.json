@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^x.x.x",
     "@types/node": "^x.x.x",
     "@types/pg": "^8.10.9",
@@ -20,6 +21,7 @@
   },
   "dependencies": {
     "body-parser": "^x.x.x",
+    "cors": "^2.8.5",
     "express": "^x.x.x",
     "pg": "^8.11.3"
   }
