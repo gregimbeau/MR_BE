@@ -1,0 +1,26 @@
+{
+  "name": "moda-resa-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^x.x.x",
+    "@types/node": "^x.x.x",
+    "@types/pg": "^8.10.9",
+    "ts-node": "^x.x.x",
+    "typescript": "^x.x.x"
+  },
+  "dependencies": {
+    "body-parser": "^x.x.x",
+    "express": "^x.x.x",
+    "pg": "^8.11.3"
+  }
+}
